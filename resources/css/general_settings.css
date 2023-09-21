@@ -7,7 +7,8 @@
 body {
     margin-left: 50px;
     margin-right: 50px;
-    background-image: url(https://images.pexels.com/photos/7412072/pexels-photo-7412072.jpeg?auto=compress&cs=tinysrgb&w=1600);
+    background: url(https://images.pexels.com/photos/7412095/pexels-photo-7412095.jpeg?auto=compress&cs=tinysrgb&w=1600);
+    background-size:cover;
 
 }
 
