@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular Registrierung</title>
+
+    <link rel="icon" href="resources\images\clothes-hanger-svgrepo-com.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="resources\css\general_settings.css">
+    <link rel="stylesheet" href="resources\css\footer.css">
+    <link rel="stylesheet" href="resources\css\header.css">
+    <link rel="stylesheet" href="resources\css\main.css">
+
+</head>
+
+<body>
+
+<header class="header_container">
+    <nav>
+        <a href="index.html">Startseite</a>
+        <a href="information.html">Weitere Informationen</a>
+        <a href="contact.html">Kontakt</a>
+    </nav>
+</header>
+<main>
+    <div class="h2_form">
+        <h2 id="form">Kleiderspenden-Registrierung</h2>
+    </div>
+    <section class="form_general">
+        <div class="register_container">
+            <form id="formRegistrierungSpende">
+                <div>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="vorname">Vorname:</label><br>
+                    <input type="text" id="vorname" name="vorname" required><br>
+                </div>
+                
+                <div>
+                    <input type="radio" id="abholung" name="abholung_abgabe" value="Abholung" required onclick="showHideFields()">
+                    <label for="abholung">Abholung durch Sammelfahrzeug</label><br>
+                </div>
+                <div>                        
+                    <input type="radio" id="abgabe" name="abholung_abgabe" value="Abgabe" required onclick="showHideFields()">
+                    <label for="abgabe">Abgabe an Geschäftsstelle</label><br>
+                </div>
+                <div id="address-fields" style="display: none">
+                    <label for="strasse">Straße:</label><br>
+                    <input type="text" id="strasse" name="strasse"><br>
+                
+                    <label for="hausnummer">Nr:</label><br>
+                    <input type="number" id="hausnummer" name="hausnummer"><br>
+                
+                    <label for="postleitzahl">Postleitzahl:</label><br>
+                    <input type="number" id="postleitzahl" name="postleitzahl" pattern="[0-9]{5}" onkeyup="checkPostleitzahlen()"><br>
+                    <label for="ort">Ort:</label><br>
+                    <input type="text" id="ort" name="ort"><br>
+                    
+                    <div id="vorschlag-abgabe" style="display: none">
+                        <p>Information: In Ihrer Nähe befindet sich eine Geschäftsstelle. Sie können Ihre Spende direkt vor Ort abgeben. Bitte verwenden Sie hierfür die Auswahlmöglichkeit: "Abgabe an Geschäftsstelle"</p>
+                    </div>
+                </div>
+                <div id="address-fields_abgabe" style="display: none">
+                    <label for="postleitzahl_abgabe">Postleitzahl:</label><br>
+                    <input type="number" id="postleitzahl_abgabe" name="postleitzahl_abgabe" pattern="[0-9]{5}"><br>
+
+                    <label for="ort_abgabe">Ort:</label><br>
+                    <input type="text" id="ort_abgabe" name="ort_abgabe"><br>
+                </div>
+
+                <div>
+                    <label for="art">Art der Kleider:</label><br>
+                    <textarea rows="2" cols="20" name="art"></textarea><br>
+                </div>
+                <div>
+                <label for="zielland">Zielland:</label><br>
+                    <select id="zielland" name="zielland" required>
+                        <option value="Europa">Europa</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Jemen">Jemen</option>
+                        <option value="Syrien">Syrien</option>
+                        <option value="Äthiopien">Äthiopien</option>
+                        <option value="Somalia">Somalia</option>
+                        <option value="Südsudan">Südsudan</option>
+                        <option value="Libanon">Libanon</option>
+                        <option value="Sudan">Sudan</option>
+                        <option value="Demokratische Republik Kongo">Demokratische Republik Kongo</option>
+                    </select><br>
+                </div>
+                <div>
+                    <label for="email">E-Mail:</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                </div><br>
+                <div class="submit">
+                    <input class="submit" type="submit" value="Bestätigen">
+                    <input class="reset" type="reset" value="Reset">
+                </div>    
+            </form>
+        <div id="bestaetigung"></div>
+        <script src="resources\script\script.js"></script>                     
+        </div>
+    </section>
+</main>
+<footer>
+    <div>
+        <a class="footerLink" href="index.html">Startseite</a>
+    </div>    
+    <div class="copyright">
+            <img class="img_copyright" src="resources\images\copyright-svgrepo-com.svg" alt="">
+            <p class="copyright">Copyright 2023</p>
+    </div>
+</footer>
+</body>
+</html>

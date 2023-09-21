@@ -1,0 +1,127 @@
+footer {
+    margin-top: 100px;
+}
+
+h3 {
+    font-size: 25px;
+    color: rgb(24, 73, 71)
+}
+
+.grid_container {
+    margin: 60px auto;
+    width: 1500%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 15px;
+    grid-template-areas:
+    "item1 item1 item2 item3"
+    "item4 item5 item5 item3";
+}
+
+.grid_item {
+    background-color: rgba(189, 211, 108, 0.700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 50px;
+}
+
+.grid_item img {
+    height: 90px;
+    width: 90px;
+}
+
+
+#item1 {
+    grid-area: item1;
+}
+
+#item2 {
+    grid-area: item2;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#item3 {
+    grid-area: item3;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#item4 {
+    grid-area: item4;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#item5 {
+    grid-area: item5;
+}
+
+.img_copyright {
+    width: 20px;
+    height: 20px;
+}
+
+.copyright {
+    display: flex;
+    justify-content: right;
+    color: rgb(24, 73, 71);
+    font-size: 15px;
+    
+}
+
+.footerLink {
+    color: rgb(24, 73, 71);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+@media(max-width: 1300px) {
+    .grid_container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 300px 300px 300px;
+        
+        grid-template-areas:
+        "item1 item1 item2"
+        "item4 item5 item5"
+        "item3 item3 item3";
+    }
+}
+
+@media(max-width: 900px) {
+    .grid_container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        
+        grid-template-areas:
+        "item1 item1"
+        "item5 item5"
+        "item2 item4"
+        "item3 item3";
+    }
+}
+
+@media(max-width: 650px) {
+    .h2_contact {
+        font-size: 9vw;
+    }
+
+    .grid_item {
+        padding: 20px;
+    }
+
+    .grid_item img {
+        height: 100px;
+        width: 100px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+}

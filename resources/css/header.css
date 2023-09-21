@@ -1,0 +1,26 @@
+.header_container {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(189, 211, 108, 0.700);
+  padding: 10px; /*Rahmen*/
+  margin-right: 50px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+a {
+    color: rgb(24, 73, 71);
+    text-decoration: none;
+  }
+
+a:hover {
+    text-decoration: underline;
+    font-weight: bolder;
+  }
