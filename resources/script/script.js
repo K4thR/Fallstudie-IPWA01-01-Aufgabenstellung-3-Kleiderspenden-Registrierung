@@ -45,7 +45,22 @@ const form = document.getElementById("formRegistrierungSpende");
 form.addEventListener("submit", function (e) {
   e.preventDefault(); //verhindert, dass die Seite neu lädt
 
-  const nachricht = "Vielen Dank! Ihre Kleiderspenden-Registrierung war erfolgreich. Sie werden in Kürze eine E-Mail erhalten.";
+  const vorname = document.getElementById("name").value;
+  const name = document.getElementById("vorname").value;
+  const email = document.getElementById("email").value;
+
+  const art = document.getElementById("art").value;
+  const zielland = document.getElementById("zielland").value;
+
+  const jetzt = new Date();
+  const datumUhrzeit = jetzt.toLocaleString();
+
+  const nachricht = `Vielen Dank ${vorname} ${name}! Ihre Kleiderspenden-Registrierung am ${datumUhrzeit} war erfolgreich. Sie werden in Kürze eine E-Mail mit weiteren Informationen an ${email} erhalten.<br>
+  <ul>
+    <li>Gewähltes Zielland Ihrer Spende: ${zielland}</li> 
+    <li>Art der Kleidung: ${art}</li>
+  </ul>`;
+
   const bestaetigungsDiv = document.getElementById("bestaetigung");
   bestaetigungsDiv.innerHTML = nachricht;
 

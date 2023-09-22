@@ -6,6 +6,7 @@ h1 {
 
 .about_general {
     margin-top: 100px;
+    padding: 10px;
     background-color: rgba(189, 211, 108, 0.700);
 }
 
@@ -29,12 +30,13 @@ h1 {
 .register_container {
     padding: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    background-color: rgba(189, 211, 108, 0.700);
 }
 
 .form_general {
     margin-top: 100px;
-    background-color: rgba(189, 211, 108, 0.700)
+
 }
 
 h2 {
@@ -52,7 +54,6 @@ label {
 }
 
 input[type="text"] {
-    
     width: 300px;
     padding: 10px;
     border: 2px solid rgb(203, 214, 214);
@@ -156,6 +157,20 @@ form {
 
 .informationGeneral {
     background-color: rgba(189, 211, 108, 0.700);
+    padding: 10px;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#vorschlag-abgabe {
+    background-color: rgba(24, 73, 71);
+    color: rgb(203, 214, 214);
+    padding: 10px;
+    border: 5px solid rgb(24, 73, 71);
 }
 
 @media(max-width: 1300px) {
@@ -174,24 +189,35 @@ form {
 }
 
 @media(max-width: 800px) {
-    
+    form {
+        display: table;   
+    }
 }
 
 @media(max-width: 600px) {
-     nav {
-        font-size: 15px;
-     }
+    nav {
+        flex-direction: column;
+    }
+    input {
+        max-width: 60%;
+    }
+    select {
+        max-width: 60%;
+    }
+    textarea {
+        max-width: 60%;
+    }
+    .submit {
+        justify-content: flex-start;
+        gap: 5px;
+    }
+
      h1 {
         font-size: 40px
      } 
      h2 {
         font-size: 30px;
      }  
-}
 
-@media(max-width: 450px) {
-    nav {
-       font-size: 10px;
-    }   
 }
 
