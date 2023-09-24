@@ -18,7 +18,7 @@ function showHideFields() {
   }
 }
 
-const geschaeftsstellenPLZ = ['12', '86', '98'];
+const geschaeftsstellenPLZ = ['12'];
 
 function checkPostleitzahlen() {
   const inputPLZ = document.getElementById("postleitzahl").value.substring(0, 2);
